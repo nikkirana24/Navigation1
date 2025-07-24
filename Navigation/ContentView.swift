@@ -11,13 +11,21 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Text("This is the root view.")
+                Text("This is the home page of my website.")
+                    .foregroundColor(Color(hue: 0.758, saturation: 0.583, brightness: 0.506))
+                NavigationLink(destination: ContentView()) {
+                    Text("Home Page")
+                }
                 NavigationLink(destination: SecondView()) {
-                    Text("Click me!")
+                    Text("About Me")
+                }
+                NavigationLink(destination: ThirdView()) {
+                    Text("Contact Information")
+                }
+                NavigationLink(destination: FourthView()) {
+                    Text("Help")
                 }
             }
-            .navigationTitle("Home")
-            .navigationBarTitleDisplayMode(.inline)
             .navigationBarHidden(true)
         }
     }
