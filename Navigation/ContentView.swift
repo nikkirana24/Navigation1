@@ -13,6 +13,7 @@ struct ContentView: View {
             VStack {
                 Text("This is the home page of my website.")
                     .foregroundColor(Color(hue: 0.758, saturation: 0.583, brightness: 0.506))
+                
                 NavigationLink(destination: ContentView()) {
                     Text("Home Page")
                 }
